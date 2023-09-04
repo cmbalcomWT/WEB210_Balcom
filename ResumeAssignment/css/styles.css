@@ -1,0 +1,72 @@
+/*
+******COLOR PALLET******
+Ash gray: #a7c4b5
+Chinese Violet: #805e73
+Davy's Gray: #4e4d5c
+Charcoal: #2d4654
+Charcoal: #243b4a
+*/
+
+/* Global Styles
+-------------------------------*/
+body{
+    color: #243b4a;
+    background: #a7c4b5;
+}
+img{
+    width: 300px;
+}
+a{
+    color: #a7c4b5;
+}
+a:hover{
+    text-decoration: none;
+}
+
+
+/* Profile
+-------------------------------*/
+header{
+    background: #805e73;
+    color: #2d4654;
+}
+
+
+/* Projects
+-------------------------------*/
+.projects{
+    background: #2d4654;
+    color: #805e73;
+}
+
+
+/* Work Experience
+-------------------------------*/
+.work-experience{
+    background: #4e4d5c;
+    color: #805e73;
+}
+
+
+/* Education
+-------------------------------*/
+
+
+
+/* Contact Info
+-------------------------------*/
+footer{
+    background: #805e73;
+    color: #2d4654;
+}
+/*footer a{}*/
+footer .btn{
+    color: #805e73;
+    background-color: #a7c4b5;
+    text-decoration: none;
+    padding: 4px;
+    border-radius: 4px;
+}
+footer .btn:hover{
+    background: rgba(167, 196, 181, 80%);
+}
