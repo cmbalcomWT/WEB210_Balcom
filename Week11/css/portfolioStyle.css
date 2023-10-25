@@ -1,0 +1,199 @@
+/*Portfolio Styles*/
+
+/*
+******COLOR PALLET******
+Blue: #5c99c5
+Darker Blue: #3d77a0
+Grey: #4f4f4f
+Dark Grey: #262626
+Off-White: #d2e8ef
+*/
+
+/* Global Styles
+-------------------------------*/
+html{
+    box-sizing: border-box;
+}
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+/*RESET ALL MARGINS AND PADDINGS*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #4f4f4f;
+    color: #d2e8ef;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/*LINKS*/
+a:link{
+    color: #d2e8ef;
+    text-decoration: none;
+    font-size: 20px;
+}
+a:visited{
+    color: #d2e8ef;
+}
+a:hover{
+    color: #5c99c5;
+}
+
+/*Font sizes*/
+h1{
+    font-size: 60px;
+    padding-bottom: 10px;
+}
+h2, h3{
+    font-size: 40px;
+}
+h3{
+    margin: 10px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    background-color: #5c99c5;
+    border: 5px solid #262626;
+}
+p{
+    font-size: 20px;
+    line-height: 25px;
+    margin: 10px;
+}
+
+/*.content-wrap{
+    max-width: 800px;
+    width: 85%;
+    margin: 0 auto;
+    padding: 60px 0;
+}*/
+/*UL/LI Global*/
+ul{
+    text-align: center;
+    list-style: none;
+    /*Stretches the list items evenly across the screen*/
+    display: flex;
+    align-items: stretch;
+    justify-content: space-evenly;
+}
+ul li{
+    display: inline-block;
+    position: relative;
+    padding: 15px 40px;
+}
+
+/* Header Styles
+-------------------------------*/
+header{
+    background-color: #5c99c5;
+    padding: 20px;
+}
+h1, h2{
+    text-align: center;
+}
+
+/* Navigation Styles
+-------------------------------*/
+nav{
+    background-color: #262626;
+    margin: 0;
+}
+
+
+
+
+/* Grid Styles
+-------------------------------*/
+.columnContainer{
+    display: inline-grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    justify-items: center;
+    width: 90%;
+    margin-left: 5%;
+}
+.columnContainer a:link{
+    color: #5c99c5;
+    text-decoration: none;
+    font-size: 20px;
+}
+.columnContainer a:visited{
+    text-decoration: underline; /*Doesn't work for some reason?*/
+    color: #5c99c5;
+}
+.columnContainer a:hover{
+    color: #d2e8ef;
+}
+.columnContainer a:active{
+    color: red;
+}
+/*Columns*/
+.columnContainer > section{ /*Adds a border between columns*/
+    border-right: 2px dashed black;
+    text-align: center;
+    grid-column: span 1;
+    grid-row: span 1;
+}
+.columnContainer>section:last-of-type{ /*Removes border from rightmost column*/
+    border-right: none;
+}
+/*Rows*/
+.columnContainer > section > div{ /*Space Between Rows*/
+    margin-bottom: 30px;
+}
+
+
+/* Image Styles
+-------------------------------*/
+img{
+    border: 4px solid #262626;
+}
+
+
+/* Footer Styles
+-------------------------------*/
+footer{
+    background-color: #3d77a0;
+}
+.footerLinks{
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-evenly;
+}
+.footerLinks a{
+    padding: 15px;
+    display: inline-block;
+}
+
+
+/********MEDIA QUERIES*******/
+@media screen and (max-width: 1720px){
+    h1{
+        font-size: 40px;
+    }
+    h2, h3{
+        font-size: 25px;
+    }
+    p, a:link, .columnContainer a:link{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 820px){
+    .columnContainer{
+        display: grid;
+        grid-template-columns: 1fr;
+        column-gap: 35px;
+    }
+    .columnContainer > section{ /*Adds a border between columns*/
+        border-bottom: 2px dashed black;
+        border-right: none;
+        text-align: center;
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+    .columnContainer>section:last-of-type{ /*Removes border from rightmost column*/
+        border: none;
+    }
+}
